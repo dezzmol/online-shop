@@ -1,0 +1,13 @@
+.button {
+    min-width: 80px;
+    cursor: pointer;
+    border: black 2px solid;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    font-size: 15px;
+}
+
+button:hover {
+    background: rgba(0,0,0, 0.3);
+    color: white;
+}

@@ -1,0 +1,16 @@
+.myheader_links {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    background: #fcdddd;
+    margin-left: 60px;
+}
+
+.myheader {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background: #fcdddd;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
