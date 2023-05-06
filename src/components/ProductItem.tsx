@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import {ICartItem, IProduct} from "../types";
 import classes from '../styles/ProductItem.module.css'
 import Button from "./UI/Button/Button";
-import {useAppSelector} from "../hooks/useTyped";
+import {useAppDispatch, useAppSelector} from "../hooks/useTyped";
 import {addToCart} from "../store/cart/cartSlice";
 
 interface IProductItem {
@@ -11,6 +11,8 @@ interface IProductItem {
 }
 
 const ProductItem: FC<IProductItem> = (productItem) => {
+
+    const dispatch = useAppDispatch();
 
     const toCartItem = (productId: number, count: number): ICartItem => {
         console.log({productId, count})
@@ -39,7 +41,7 @@ const ProductItem: FC<IProductItem> = (productItem) => {
                 {productItem.productItem.description}
             </div>
             <div className={classes.button}>
-                <Button onClick={() => addToCart(toCartItem(productItem.productItem.id, 1))}>Add to card</Button>
+                <Button onClick={() => dispatch(addToCart(toCartItem(productItem.productItem.id, 1)))}>Add to card</Button>
             </div>
         </div>
     );

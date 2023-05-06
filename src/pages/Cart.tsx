@@ -23,7 +23,9 @@ const Cart = () => {
     return (
         <div className={classes.body}>
             {cartItems.length > 0 ?
-                <div>dasd</div>
+                <div>{cartItems.map(cartItem =>
+                    <CartItem productId={cartItem.productId} count={cartItem.count}/>
+                )}</div>
                 : <div>No items in the Cart</div>
             }
 
