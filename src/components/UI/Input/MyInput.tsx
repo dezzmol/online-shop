@@ -1,19 +1,17 @@
-import React, {FC} from 'react';
+import React, {ChangeEventHandler, HTMLInputTypeAttribute} from 'react';
+import classes from "./MyInput.module.css";
 
-export class MyInput extends React.Component {
-    private input = React.useRef<HTMLInputElement>(null);
-
-    componentDidMount() {
-        if (this.input.current) {
-            this.input.current.focus();
-        }
-    }
-
-    render() {
-        return (
-            <form>
-                <input ref={this.input} type="text" />
-            </form>
-        );
-    }
+interface IMyInputProps {
+    placeholder: string | undefined;
+    value: string | number | undefined;
+    readOnly: boolean | undefined;
+    onChange: ChangeEventHandler<HTMLInputElement> | undefined;
 }
+
+const MyInput = React.forwardRef<HTMLInputElement, IMyInputProps>((props, ref) => {
+    return (
+        <input ref={ref} className={classes.MyInput} {...props} />
+    );
+});
+
+export default MyInput;
