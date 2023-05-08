@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import {IProduct, ICartItem} from "../types";
 import {useAppDispatch, useAppSelector} from "../hooks/useTyped";
 import cart from "../pages/Cart";
@@ -32,6 +32,9 @@ const CartItem: FC<ICartItem> = (cartItem) => {
             <div className={classes.description}>
                 <h2>{product!.title}</h2>
                 {product!.description}
+                <h3 className={classes.price}>
+                    Price: {product!.price} $
+                </h3>
             </div>
             <div className={classes.count}>
                 <h2>Count:</h2>

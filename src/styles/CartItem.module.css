@@ -31,6 +31,10 @@
 
 }
 
+.price {
+    background: inherit;
+}
+
 .count {
     background: inherit;
     margin-left: 30px;
