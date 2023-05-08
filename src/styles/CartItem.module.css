@@ -1,0 +1,50 @@
+.body {
+    margin: 10px 10px;
+    padding: 10px 10px;
+    border: 3px black solid;
+    border-radius: 15px;
+    background: white;
+    min-width: 260px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.category {
+    background: white;
+}
+
+.image {
+    background: inherit;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.description {
+    background: inherit;
+}
+
+.button {
+    background: white;
+    display: flex;
+
+}
+
+.count {
+    background: inherit;
+    margin-left: 30px;
+}
+
+.input {
+    background: inherit;
+}
+
+.button {
+    background: inherit;
+    margin-top: 10px;
+}
+
+h2 {
+    background: inherit;
+}
