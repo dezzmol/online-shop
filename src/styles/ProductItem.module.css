@@ -1,11 +1,17 @@
 .body {
-    margin: 10px 10px;
     padding: 10px 10px;
     border: 3px black solid;
     border-radius: 15px;
     background: white;
     min-width: 260px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    display: block;
+    justify-content: space-between;
+}
+
+.mainInfo {
+    background: white;
+
 }
 
 .category {
@@ -26,5 +32,9 @@
 .button {
     background: inherit;
     display: flex;
+}
 
+.price {
+    background: inherit;
+    font-weight: 700;
 }
