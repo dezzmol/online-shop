@@ -1,9 +1,10 @@
 import React, {FC} from 'react';
-import {ICartItem, IProduct} from "../types";
+import {IProduct} from "../types";
 import classes from '../styles/ProductItem.module.css'
 import Button from "./UI/Button/Button";
-import {useAppDispatch, useAppSelector} from "../hooks/useTyped";
+import {useAppDispatch} from "../hooks/useTyped";
 import {addToCart} from "../store/cart/cartSlice";
+import {toCartItem} from "../helpers";
 
 interface IProductItem {
     productItem: IProduct,
@@ -11,17 +12,7 @@ interface IProductItem {
 }
 
 const ProductItem: FC<IProductItem> = (productItem) => {
-
     const dispatch = useAppDispatch();
-
-    const toCartItem = (productId: number, count: number): ICartItem => {
-        console.log({productId, count})
-        const cartItem: ICartItem = {productId, count}
-        console.log(cartItem)
-        return cartItem
-    }
-
-    const {cartItems} = useAppSelector(state => state.cart)
 
     return (
         <div className={classes.body}>

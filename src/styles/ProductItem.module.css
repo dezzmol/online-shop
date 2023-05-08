@@ -9,22 +9,22 @@
 }
 
 .category {
-    background: white;
+    background: inherit;
 }
 
 .image {
-    background: white;
+    background: inherit;
     height: 200px;
     display: flex;
     justify-content: center;
 }
 
 .description {
-    background: white;
+    background: inherit;
 }
 
 .button {
-    background: white;
+    background: inherit;
     display: flex;
 
 }

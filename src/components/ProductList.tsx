@@ -4,7 +4,6 @@ import {fetchProducts} from "../store/product/ActionCreators";
 import Loader from "./UI/Loader/Loader";
 import ProductItem from "./ProductItem";
 import classes from "../styles/ProductList.module.css"
-import {MyInput} from "./UI/Input/MyInput";
 
 const ProductList: FC = () => {
     const dispatch = useAppDispatch()
