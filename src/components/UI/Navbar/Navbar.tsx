@@ -8,6 +8,9 @@ const Navbar: FC = () => {
 
     return (
         <div className={classes.myheader}>
+            <div className={classes.title} onClick={() => navigate('/shop')}>
+                ONLINE-SHOP
+            </div>
             <div className={classes.myheader_links}>
                 <Button onClick={() => navigate("/about")}>About</Button>
                 <Button onClick={() => navigate("/shop")}>Shop</Button>

@@ -3,7 +3,8 @@
     justify-content: space-between;
     width: 400px;
     background: #fcdddd;
-    margin-left: 60px;
+    margin-left: 160px;
+    margin-right: 160px;
 }
 
 .myheader {
@@ -13,4 +14,15 @@
     background: #fcdddd;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title {
+    min-width: 200px;
+    margin-left: 160px;
+    background: inherit;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
 }
