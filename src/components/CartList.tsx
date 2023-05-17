@@ -15,7 +15,7 @@ const CartList: FC = () => {
         cartItems.map(item => {
                 product = products.find(i => i.id === item.productId)
                 if (product) {
-                   tempCost += product.price;
+                   tempCost += product.price * item.count;
                 }
             }
         )
