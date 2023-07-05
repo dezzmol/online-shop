@@ -5,6 +5,7 @@ interface IMyInputProps {
     placeholder: string | undefined;
     value: string | number | undefined;
     readOnly: boolean | undefined;
+    type: HTMLInputTypeAttribute | undefined;
     onChange: ChangeEventHandler<HTMLInputElement> | undefined;
 }
 
