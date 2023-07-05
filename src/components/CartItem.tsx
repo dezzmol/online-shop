@@ -44,6 +44,7 @@ const CartItem: FC<ICartItem> = (cartItem) => {
                         value={cartItem.count}
                         readOnly={false}
                         onChange={e => {countChange(toCartItem(cartItem.productId, Number(e.target.value)))}}
+                        type={"number"}
                     />
 
                 </div>

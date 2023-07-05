@@ -1,9 +1,12 @@
-import React, {FC, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import {Routes, Route} from "react-router-dom";
 import {privatePages, publicPages} from "../router";
+import {useAppDispatch, useAppSelector} from "../hooks/useTyped";
 
 const AppRouter: FC = () => {
-    const [isAuth, setIsAuth] = useState<boolean>(true);
+    const isAuth = useAppSelector(state => state.auth.Auth)
+    const dispatch = useAppDispatch()
+
 
     return (
         <Routes>
